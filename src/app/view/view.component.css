@@ -1,0 +1,11 @@
+.subheader{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.view .greeting{    
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}

@@ -1,0 +1,51 @@
+<div class="subheader">
+  <div class="search">
+    <label>Search</label>
+    <input type="text" placeholder="Search"/>
+  </div>
+  <div class="filter">
+    <label>Select</label>
+    <select>
+      <option>Today</option>
+      <option>This Week</option>
+      <option>Last Quarter</option>
+      <option>Last Month</option>
+      <option>Last Year</option>
+      <option>Range</option>
+    </select>
+  </div>
+</div>
+
+<div class="view">
+  <div class="greeting">
+    <div class="brand">
+      Hello Brand Name
+    </div>
+    <div class="time">
+      Showing 12/10/2018 Data
+    </div>
+  </div>
+  <div class="table">
+    <table border="1px">
+      <tr>
+        <th>Brand Name</th>
+        <th>First Campign</th>
+        <th>Count of Campign</th>
+    </tr>
+    <tr *ngFor="let advertiser of data">
+      <td>
+        {{ advertiser.advertiserName }}
+      </td>
+      <td *ngIf="advertiser.campaigns.length > 0">
+        {{ advertiser.campaigns[0].name }}
+      </td>
+      <td *ngIf="advertiser.campaigns.length == 0">
+          
+        </td>
+      <td>
+          {{ advertiser.campaigns.length }}
+      </td>
+    </tr>
+    </table>
+  </div>
+</div>
